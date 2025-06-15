@@ -40,6 +40,38 @@ body, html {
   .nav-logo { height: 60px; }   /* taller logo */
   .w3-bar    { height: 60px; }  /* matching bar height so nothing crops */
 }
+
+/* ─── DARK THEME OVERRIDES ───────────────────────── */
+.dark-theme {
+  background: #000;           /* page background                      */
+  color: #e6e6e6;             /* default text colour                  */
+}
+
+/* Navbar ----------------------------------------------------------- */
+.dark-theme #myNavbar {
+  background: #000;           /* match page                           */
+  color: #e6e6e6;
+}
+.dark-theme #myNavbar a {     /* links in the bar                     */
+  color: #f5f5f5 !important;  /* override W3CSS defaults              */
+}
+.dark-theme #myNavbar a:hover {
+  background: #222 !important; /* subtle hover feedback               */
+}
+
+/* Generic link colour site-wide ------------------------------------ */
+.dark-theme a:not(.w3-button):not(.w3-bar-item) {
+  color: #5fbaff;            /* pick any accent you like             */
+}
+
+/* Sections that had a “light” background in the template ---------- */
+.dark-theme .w3-light-grey,
+.dark-theme .w3-white {
+  background: #111 !important;  /* very dark grey so cards still pop  */
+}
+
+/* Buttons still look fine; tweak if you prefer lighter/darker */
+
   
 </style>
 </head>

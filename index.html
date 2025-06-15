@@ -28,6 +28,19 @@ body, html {
 .w3-bar .w3-button {
   padding: 16px;
 }
+
+.nav-logo {
+  height: 48px;      /* controls how tall the dragon+text appears */
+  width: auto;       /* keep aspect ratio */
+  display: block;    /* removes tiny baseline gap under images */
+}
+
+/* Optional: bump everything up a bit on wider screens */
+@media (min-width: 600px) {
+  .nav-logo { height: 60px; }   /* taller logo */
+  .w3-bar    { height: 60px; }  /* matching bar height so nothing crops */
+}
+  
 </style>
 </head>
 <body>

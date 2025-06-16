@@ -18,7 +18,7 @@ body, html {
 }
 
 /* Full height image header */
-.bgimg-1 {
+/*.bgimg-1 {
   background-position: center;
   background-size: cover;
   background-image: url("/w3images/mac.jpg");
@@ -27,6 +27,26 @@ body, html {
 
 .w3-bar .w3-button {
   padding: 16px;
+}
+
+/* ─── HERO / HEADER ───────────────────────────────────────────── */
+.bgimg-1 {
+  /* A free, dark-friendly Unsplash shot that evokes data+gaming */
+  background-image: url("https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=1950&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  min-height: 100vh;          /* full viewport height */
+  position: relative;
+}
+
+/* Optional dark overlay so white text pops on light themes too */
+.bgimg-1::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);   /* tweak opacity as you like */
 }
 
 .nav-logo {
@@ -114,13 +134,27 @@ body, html {
 </nav>
 
 <!-- Header with full-height image -->
-<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
-  <div class="w3-display-left w3-text-white" style="padding:48px">
-    <span class="w3-jumbo w3-hide-small">Start something that matters</span><br>
-    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span><br>
-    <span class="w3-large">Stop wasting valuable time with projects that just isn't you.</span>
-    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start today</a></p>
-  </div> 
+<header class="bgimg-1 w3-display-container" id="home">
+  <div class="w3-display-middle w3-center" style="padding:48px">
+    <span class="w3-jumbo w3-text-white w3-hide-small">
+      Game Intelligence, Quantified.
+    </span><br>
+    <span class="w3-xxlarge w3-text-white w3-hide-large w3-hide-medium">
+      Game Intelligence, Quantified.
+    </span><br>
+    <span class="w3-large w3-text-light-grey">
+      Actionable analytics that turn player sentiment &amp; market signals
+      into sales foresight.
+    </span>
+    <p>
+      <a href="#about"
+         class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">
+        Explore&nbsp;our&nbsp;insights
+      </a>
+    </p>
+  </div>
+
+  <!-- Social icons stay, still bottom-left -->
   <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
     <i class="fa fa-instagram w3-hover-opacity"></i>
@@ -130,6 +164,7 @@ body, html {
     <i class="fa fa-linkedin w3-hover-opacity"></i>
   </div>
 </header>
+
 
 <!-- About Section -->
 <div class="w3-container" style="padding:128px 16px" id="about">
